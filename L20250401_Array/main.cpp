@@ -14,14 +14,15 @@ int main()
 
 	//cout << Average << endl;
 
-	//반복문
+	//반복문 과 배열
 	int Korean[10];
 
-	printf("%x\n", Korean);
-	printf("%x\n", &Korean[0]);
-	printf("%x\n", &Korean[1]);
+	//printf("%x\n", Korean);
+	//printf("%x\n", &Korean[0]);
+	//printf("%x\n", &Korean[1]);
 
-	for (int i = 0; i < 10; i++) {
+	for (int i = 0; i < 10; i++)
+	{
 		Korean[i] = 3;
 	}
 
