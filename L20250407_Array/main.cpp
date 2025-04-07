@@ -40,8 +40,6 @@ string CardToString(int num)
 	int CardType = (num-1) / 13;
 	int ResultNum = (num-1) % 13 + 1;
 
-	//cout << Types[CardType];
-
 	if (ResultNum == 1)		return Types[CardType]+"A";
 	else if(ResultNum == 11) return  Types[CardType] + "J";
 	else if (ResultNum == 12) return Types[CardType] + "Q";
