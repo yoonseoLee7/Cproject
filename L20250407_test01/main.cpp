@@ -36,6 +36,14 @@ void PrintBall()
 	}
 }
 
+int Minus(int A, int B)
+{
+	int C = A - B;
+	cout << "a-b: "<<C << endl;
+
+	return 0;
+}
+
 int main()
 {
 	srand(time(NULL));
@@ -44,6 +52,8 @@ int main()
 	Initialize();
 	Shuffle();
 	PrintBall();
+
+	Minus(7, 5);
 
 	return 0;
 }
