@@ -27,7 +27,7 @@ int main()
 		}
 		else {
 
-			SecondArray[i] = (i + 1) * 4;
+			SecondArray[i] = (i - 9) * 4;
 			cout << SecondArray[i] << endl;
 		}
 
