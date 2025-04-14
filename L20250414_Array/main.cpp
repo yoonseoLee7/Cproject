@@ -14,13 +14,13 @@ struct Player {
     char icon = 'P';
 };
 
-char map[HEIGHT][WIDTH + 1] = {
+char Map[HEIGHT][WIDTH + 1] = {
     "***********",
     "*         *",
     "*         *",
     "*         *",
     "*         *",
-    "*         *",
+    "*     G   *",
     "*         *",
     "*         *",
     "*         *",
@@ -35,9 +35,9 @@ void Input() {
     if (key == 224) {
         player.inputKey = _getch();
     }
-    else if (key == 27) {
+    /*else if (key == 27) {
         exit(0); 
-    }
+    }*/
 }
 
 
@@ -52,9 +52,13 @@ void Tick() {
     case 77: nx++; break; // →
     }
 
-    if (map[ny][nx] != '*') {
+    if (Map[ny][nx] != '*') {
         player.x = nx;
         player.y = ny;
+    }
+
+    if (Map[ny][nx] == 'G') {
+        exit(0);
     }
 
     player.inputKey = 0;
@@ -68,7 +72,7 @@ void Render() {
             if (x == player.x && y == player.y)
                 cout << player.icon;
             else
-                cout << map[y][x];
+                cout << Map[y][x];
         }
         cout << endl;
     }
@@ -80,7 +84,6 @@ int main() {
         Tick();    
         Render();  
     }
-
 
     return 0;
 }
