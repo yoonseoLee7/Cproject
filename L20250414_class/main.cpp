@@ -5,22 +5,32 @@
 #include "Floor.h"
 #include "World.h"
 #include "Goal.h"
+#include "Actor.h"
 
 using namespace std;
 
 int main()
 {
 
-	Player* PlayerA = new Player();
-	AMonster* Monstar = new AMonster();
+	//Player* PlayerA = new Player();
+	//AMonster* Monstar = new AMonster();
 
 
 
-	delete PlayerA;
-	PlayerA = nullptr;
+	//delete PlayerA;
+	//PlayerA = nullptr;
 
-	delete Monstar;
-	Monstar = nullptr;
+	//delete Monstar;
+	//Monstar = nullptr;
+
+	AMonster Monster;
+
+	Monster.Move();
+
+	Actor AActor;
+	AActor.Shape;
+	
+
 
 	return 0;
 }

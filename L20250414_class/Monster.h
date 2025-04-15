@@ -1,10 +1,11 @@
 #pragma once
-class AMonster
+#include "Actor.h"
+
+class AMonster:public Actor
+
 {
 
-	int X;
-	int Y;
-	char Shape;
+public:
 
 	void Move();
 

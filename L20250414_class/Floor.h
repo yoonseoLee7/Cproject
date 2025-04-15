@@ -1,5 +1,7 @@
 #pragma once
-class AFloor
+#include "Actor.h"
+
+class AFloor :public Actor
 {
 
 	int X;
