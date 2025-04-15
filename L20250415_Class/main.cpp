@@ -9,6 +9,9 @@ using namespace std;
 
 int main()
 {
+	APlayer Player;
+	Player.NickName = "춘득짱";
+
 
 	AWorld PrintMons;
 
