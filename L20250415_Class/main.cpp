@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 #include "World.h"
 #include "Monster.h"
 #include "Goblin.h"
@@ -9,20 +10,10 @@ using namespace std;
 int main()
 {
 
-	//AGoblin Goblin;
-	//Goblin.SlideAttack();
+	AWorld PrintMons;
 
-	APlayer Player;
-	Player.MonsterAttack(10);
-	
-	AMonster* Monster = new AMonster();
+	PrintMons.Initialize();
 
-	Monster->HP = 1;
-
-	delete Monster;
-	Monster = nullptr;
-
-	Player.PlayerHPMP(150, 20,Player.GetName());
 
 	return 0;
 }

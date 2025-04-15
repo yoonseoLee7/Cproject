@@ -7,10 +7,10 @@ char APlayer::GetName()
 
 void APlayer::SetName(int N)
 {
-	if (ID == 1) {
+	/*if (ID == 1) {
 		Name = '나';
 	}
 	else {
 		Name = '너';
-	}
+	}*/
 }

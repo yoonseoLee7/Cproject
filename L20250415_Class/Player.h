@@ -1,5 +1,6 @@
 #pragma once
 #include "World.h"
+#include <iostream>
 
 class APlayer:public AWorld
 {
@@ -8,6 +9,7 @@ private:
 	char Name;
 
 public:
+	string NickName;
 	char GetName();
 	void SetName(int N);
 

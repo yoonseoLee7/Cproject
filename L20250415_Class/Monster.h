@@ -5,7 +5,7 @@ class AMonster :public AWorld
 {
 public:
 	
-
+	virtual void PrintOfMonster();
 
 };
 
