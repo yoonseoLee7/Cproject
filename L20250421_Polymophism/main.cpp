@@ -1,65 +1,59 @@
 #include <iostream>
-#include "TemplateTest.h"
-//STL -> standard template library
-//탬플릿은 에러가 나면 코드를 추적하기가 어려움
+#include <vector>
+#include "Monster.h"
+#include "Goble.h"
+#include "Slime.h"
+#include "World.h"
+#include "Player.h"
+#include "Boar.h"
+
 using namespace std;
-
-template <typename T> //자바의 제네릭이랑 비슷 , 컴파일할 때 생성됨 함수에 명시하려면 헤더에 작업해야함
-class T_FourBasic
-{
-public:
-	T Add(T A, T B);
-	T Subtract(T A, T B);
-	T Multiply(T A, T B);
-	T Divide(T A, T B);
-};
-
 int main()
 {
-	T_FourBasic<int> A;
+    UWorld* MyWorld = new UWorld();
 
-	cout << A.Add(10, 2) << endl;
-	cout << A.Subtract(10,2) << endl;
-	cout << A.Multiply(10,2) << endl;
-	cout << A.Divide(10,2) << endl;
-		
-	T_FourBasic<float> B;
+    MyWorld->SpawnActor(new AGoble());
+    MyWorld->SpawnActor(new ASlime());
+    //Player, Boar
+    MyWorld->SpawnActor(new ABoar());
+    MyWorld->SpawnActor(new APlayer());
 
-	cout << B.Add(1.f, 2.f) << endl;
-	cout << B.Subtract(7.1f, 2.f) << endl;
-	cout << B.Multiply(.1f, 2.f) << endl;
-	cout << B.Divide(1.f, 2.f) << endl;
+    MyWorld->Run();
 
-	TemplateTest<int> TT;
-
-	cout << TT.Add(10, 2) << endl;
-	cout << TT.Subtract(10, 2) << endl;
-	cout << TT.Multiply(10, 2) << endl;
-	cout << TT.Divide(10, 2) << endl;
+    delete MyWorld;
+    MyWorld = nullptr;
 
 	return 0;
 }
 
-template<typename T>
-T T_FourBasic<T>::Add(T A, T B)
-{
-	return A + B;
-}
+//vector<AMonster*> Monster;
 
-template<typename T>
-T T_FourBasic<T>::Subtract(T A, T B)
-{
-	return A - B;
-}
+//Monster.push_back(new AMonster()); 
+//Monster.push_back(new AMonster());
+//Monster.push_back(new AMonster());
 
-template<typename T>
-T T_FourBasic<T>::Multiply(T A, T B)
-{
-	return A * B;
-}
+//vector<AMonster*>::iterator iter = Monster.begin();
+////원하는 1개를 지정하여 삭제하는방법
+//iter++;
+//delete (*iter);
+//Monster.erase(iter); // 화살표까지 삭제
 
-template<typename T>
-T T_FourBasic<T>::Divide(T A, T B)
+//통째로 삭제
+/*for (auto Mon : Monster)
 {
-	return A / B;
+	delete Mon;
 }
+Monster.clear();*/
+
+//vector<AMonster*> Monsters;
+//
+//Monsters.push_back(new AGoble());
+//Monsters.push_back(new ASlime());
+//Monsters.push_back(new AMonster());
+
+//모든 몬스터(액터)가 이동한다
+//for (auto Mon : Monsters)
+//{
+//	//다형성
+//	Mon->Move();
+//}
