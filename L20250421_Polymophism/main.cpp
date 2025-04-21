@@ -6,6 +6,9 @@
 #include "World.h"
 #include "Player.h"
 #include "Boar.h"
+#include "Wall.h"
+#include "Floor.h"
+#include "Goal.h"
 
 using namespace std;
 int main()
@@ -14,9 +17,11 @@ int main()
 
     MyWorld->SpawnActor(new AGoble());
     MyWorld->SpawnActor(new ASlime());
-    //Player, Boar
     MyWorld->SpawnActor(new ABoar());
     MyWorld->SpawnActor(new APlayer());
+    MyWorld->SpawnActor(new AGoal());
+    MyWorld->SpawnActor(new AWall());
+    MyWorld->SpawnActor(new AFloor());
 
     MyWorld->Run();
 

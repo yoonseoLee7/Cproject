@@ -11,13 +11,12 @@ UWorld::~UWorld()
 
 void UWorld::Run()
 {
-	while (true)
-	{
+	
 		for (auto Actor : Actors)
 		{
 			Actor->Tick();
 		}
-	}
+
 }
 
 void UWorld::SpawnActor(AActor* SpawnedActor)
