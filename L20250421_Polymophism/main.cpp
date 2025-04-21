@@ -15,13 +15,15 @@ int main()
 {
     UWorld* MyWorld = new UWorld();
 
-    MyWorld->SpawnActor(new AGoble());
+   /* MyWorld->SpawnActor(new AGoble());
     MyWorld->SpawnActor(new ASlime());
     MyWorld->SpawnActor(new ABoar());
     MyWorld->SpawnActor(new APlayer());
     MyWorld->SpawnActor(new AGoal());
     MyWorld->SpawnActor(new AWall());
-    MyWorld->SpawnActor(new AFloor());
+    MyWorld->SpawnActor(new AFloor());*/
+
+    MyWorld->SpawnActor(new AActor());
 
     MyWorld->Run();
 
